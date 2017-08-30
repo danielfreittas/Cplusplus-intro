@@ -1,0 +1,87 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+void primamsg(){
+    cout << "::Calculadora basica::\n\n";
+    //cout <<"Ola, somos funcoes!" <<endl;
+    //cout <<"Now, let's play with that functions! :D\n";
+
+}
+
+float soma(float a, float b){
+
+    float r;
+    r=a+b;
+    return r;
+}
+
+float multi(float a, float b){
+
+    float m;
+    m=a*b;
+    return m;
+
+
+}
+
+float div(float a, float b){
+
+    float d;
+    d = a/b;
+    return d;
+
+}
+
+float sub(float a, float b){
+
+    float s;
+    s=a-b;
+    return s;
+}
+
+
+int main(){
+
+    primamsg();
+    float z, a, b;
+    char opcao;
+    ///cout << "Digite dois numeros para eu calcular. \n";
+
+    ///cout <<"Agora escolha o que fazer. \n Digite (+), (-), (*) e (/)\n";
+    cin >> a >> opcao >> b;
+
+    int i = 0;
+
+    while((opcao <1 && opcao >4) && (i==1)){
+            cout<<"O Numero de tentativas acaabou :(\n";
+            break;
+
+        }
+        switch(opcao){
+
+                case '+':
+                    z = soma(a,b);
+                    cout << "= " << z <<fixed << setprecision(4)<<endl;
+                    break;
+                case '-':
+                    z = sub(a,b);
+                    cout << "= " << z <<fixed << setprecision(4)<<endl;
+                    break;
+                case '*':
+                    z = multi(a,b);
+                    cout <<"= " << z <<fixed << setprecision(4)<<endl;
+                    break;
+
+                case '/':
+                    z = div(a,b);
+                    cout << "= " << z <<fixed << setprecision(4)<<endl;
+                    break;
+                default:
+                    cout <<"Opcao invalida, tente novamente\n";
+                    break;
+
+            }
+            i++;
+
+}
